@@ -19,7 +19,16 @@ namespace motest
 
             else
             {
-
+                const int kmPerDemeritPoint = 5;
+                int demeritPoints = (carSpeed - speedLimit) / kmPerDemeritPoint;
+                if (demeritPoints > 12)
+                {
+                    Console.WriteLine("License Suspended!!");
+                }
+                else
+                {
+                    Console.WriteLine("Demerit points: " + demeritPoints);
+                }
             }
         }
     }
